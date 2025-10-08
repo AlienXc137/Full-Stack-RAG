@@ -1,0 +1,34 @@
+Agentic AI refers to autonomous, goal-oriented systems that can independently make decisions, plan, and execute multi-step tasks with minimal human intervention. Unlike traditional, rule-based AI or reactive generative AI, an agentic AI system is proactive and adaptive, continuously perceiving its environment, learning from outcomes, and adjusting its behavior to achieve complex objectives. 
+How agentic AI works
+Agentic AI operates through an iterative, four-stage process that allows it to function autonomously: 
+Perceive: The AI system uses data from various sources, such as APIs, sensors, databases, and user interactions, to understand the current state of its environment.
+Reason: Using large language models (LLMs) and other AI techniques, the system analyzes the data to determine the best course of action and develop a plan to meet its goals.
+Act: The AI executes its plan by interacting with external tools, applications, and systems.
+Learn: The system evaluates the outcome of its actions and uses this feedback to improve its performance and refine its strategies over time. 
+Core components
+A complete agentic AI architecture typically includes several key components: 
+AI Agents: Individual, specialized AI components that can work independently or collaboratively within a larger system.
+Orchestration Layer: A framework that manages the workflow, communication, and coordination between different AI agents.
+Memory: Components for storing and retrieving information, including short-term context for current tasks and long-term knowledge from past experiences.
+Tools: The APIs, applications, and functions that agents can invoke to perform tasks in the real world.
+Guardrails and Governance: Rules and policies that ensure agents operate safely, ethically, and in compliance with organizational standards.
+Human-in-the-Loop: A mechanism to pause autonomous processes and involve a human for oversight, approval, or intervention when necessary. 
+Key differences from other AI
+
+Examples and use cases
+Customer Service: An agentic AI assistant identifies a frustrated customer, automatically investigates their order history and billing, processes a refund, and proactively follows up—all without human intervention.
+IT Support: An AI assistant in a company's internal chat can resolve complex IT tickets by diagnosing issues, autonomously resetting a password, and updating relevant records across multiple systems.
+Finance: In fraud detection, an AI agent monitors transactions in real-time, identifies anomalies, and autonomously freezes an account or alerts legal teams.
+Software Development: AI agents accelerate development cycles by autonomously generating, testing, and debugging code, and monitoring and improving processes.
+Supply Chain: AI systems can monitor inventory levels, track weather, predict shipping delays, and proactively reroute shipments or restock products to minimize downtime. 
+Benefits and challenges
+Benefits:
+Increased Efficiency and Productivity: Automates complex workflows and multi-step processes, freeing human workers for more strategic tasks.
+Enhanced Decision-Making: Provides faster, data-driven decisions by analyzing vast amounts of information in real-time and continuously optimizing performance.
+Superior Adaptability: Systems are designed for dynamic environments and can adjust strategies and actions based on continuous learning and real-world feedback.
+24/7 Scalability: Can operate continuously without fatigue and scale rapidly to handle increasing workloads or data. 
+Challenges:
+Governance and Control: Ensuring that autonomous agents operate within ethical, legal, and safety boundaries, and defining accountability when unintended actions occur.
+Security Vulnerabilities: The autonomous nature of agents, which often requires interaction with external APIs and sensitive data, introduces new security risks.
+Reliability and Trust: Autonomous agents can make unpredictable choices or, like LLMs, produce confident but incorrect outputs ("hallucinations"), requiring robust testing and monitoring.
+Integration Complexity: Integrating agentic AI systems with existing, often legacy, enterprise infrastructure can be challenging and resource-intensive. 
