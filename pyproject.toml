@@ -18,6 +18,7 @@ dependencies = [
     "langchain-groq==0.3.6",
     "langsmith>=0.4.33",
     "pandas>=2.3.3",
+    "pypdf>=6.1.1",
     "python-dotenv==1.1.1",
     "python-multipart==0.0.20",
     "sentence-transformers>=5.1.1",

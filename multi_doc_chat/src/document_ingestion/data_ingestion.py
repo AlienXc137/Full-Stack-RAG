@@ -16,6 +16,11 @@ import hashlib
 import sys
 
 
+def generate_session_id() -> str:
+    """Generate a unique session ID with timestamp."""
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    unique_id = uuid.uuid4().hex[:8]
+    return f"session_{timestamp}_{unique_id}"
 
 
 class ChatIngestor:
@@ -29,7 +34,7 @@ class ChatIngestor:
             self.model_loader = ModelLoader()
 
             self.use_session = use_session_dirs
-            self.session_id = session_id 
+            self.session_id = session_id or generate_session_id()
 
             self.temp_base = Path(temp_base); self.temp_base.mkdir(parents=True, exist_ok=True)
             self.faiss_base = Path(faiss_base); self.faiss_base.mkdir(parents=True, exist_ok=True)
@@ -46,7 +51,7 @@ class ChatIngestor:
             log.error("Failed to initialize ChatIngestor", error=str(e))
             raise DocumentPortalException("Initialization error in ChatIngestor", e) from e
 
-    #Ensures each directory exists; if sessions are used, it nests under session ID.
+
     def _resolve_dir(self, base: Path):
         if self.use_session:
             d = base / self.session_id # e.g. "faiss_index/abc123"
