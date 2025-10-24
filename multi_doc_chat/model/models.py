@@ -17,7 +17,7 @@ class PromptType(str, Enum):
 class UploadResponse(BaseModel):
     session_id: str
     indexed: bool
-    message: str | None = None
+    message: str | None = None # Optional message field
 
 
 class ChatRequest(BaseModel):
