@@ -19,6 +19,7 @@ dependencies = [
     "langsmith>=0.4.33",
     "pandas>=2.3.3",
     "pypdf>=6.1.1",
+    "pytest>=8.4.2",
     "python-dotenv==1.1.1",
     "python-multipart==0.0.20",
     "sentence-transformers>=5.1.1",

@@ -21,3 +21,4 @@ Jinja2==3.1.4
 langsmith
 pandas
 pypdf
+pytest
