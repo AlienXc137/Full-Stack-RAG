@@ -13,7 +13,6 @@ The system allows users to upload PDFs, DOCX, or TXT files, automatically index 
 - CI/CD to AWS ECS Fargate via GitHub Actions  
 - Interactive web interface with file uploads and chat 
 
-```markdown
 ## Architecture Overview
 
 ```mermaid
