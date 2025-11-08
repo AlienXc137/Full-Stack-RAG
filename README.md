@@ -17,14 +17,29 @@ The system allows users to upload PDFs, DOCX, or TXT files, automatically index 
 
 ```mermaid
 sequenceDiagram
-  A[User Uploads Documents] --> B[FastAPI Backend]
-  B --> C[Data Ingestion: Text Extraction + Chunking]
-  C --> D[FAISS Vector Store]
-  D --> E[Retriever]
-  E --> F[LangChain RAG Pipeline]
-  F --> G[LLM (Google Gemini / Groq)]
-  G --> H[Response Streamed to UI]
-  B --> I[Logging & Monitoring (Structlog + LangSmith)]
+    participant User
+    participant UI as Web UI
+    participant API as FastAPI Backend
+    participant Ingestor as ChatIngestor
+    participant FAISS as FAISS Vector Store
+    participant RAG as Conversational RAG
+    participant LLM as LLM (Gemini / Groq)
+    
+    User->>UI: Uploads PDF/DOCX/TXT
+    UI->>API: POST /upload (multipart/form-data)
+    API->>Ingestor: Save, split, embed documents
+    Ingestor->>FAISS: Create or update vector index
+    API-->>User: Returns session_id
+
+    User->>UI: Sends a chat message
+    UI->>API: POST /chat (session_id, message)
+    API->>RAG: Load FAISS retriever & build LCEL chain
+    RAG->>FAISS: Retrieve top relevant chunks
+    RAG->>LLM: Generate context-aware response
+    LLM-->>RAG: Returns generated answer
+    RAG-->>API: Response packaged as JSON
+    API-->>UI: Sends answer to display
+    UI-->>User: Displays assistant response
 ```
 
 ## How it works
