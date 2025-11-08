@@ -16,6 +16,7 @@ The system allows users to upload PDFs, DOCX, or TXT files, automatically index 
 ## Architecture Overview
 
 ```mermaid
+sequenceDiagram
   A[User Uploads Documents] --> B[FastAPI Backend]
   B --> C[Data Ingestion: Text Extraction + Chunking]
   C --> D[FAISS Vector Store]
