@@ -24,6 +24,7 @@ The system allows users to upload PDFs, DOCX, or TXT files, automatically index 
   F --> G[LLM (Google Gemini / Groq)]
   G --> H[Response Streamed to UI]
   B --> I[Logging & Monitoring (Structlog + LangSmith)]
+```
 
 ## How it works
 - Upload: Files are uploaded to `data/<session_id>/`, split, embedded, and saved as a FAISS index in `faiss_index/<session_id>/`.
@@ -50,7 +51,7 @@ open http://localhost:8000/
 - `POST /upload` – Form-data file upload. Returns `{ session_id, indexed }`.
 - `POST /chat` – JSON body `{ session_id, message }`. Returns `{ answer }`.
 
-## Evaluations 🧪
+## Evaluations 
 
 Run LangSmith evaluations on your RAG system:
 
